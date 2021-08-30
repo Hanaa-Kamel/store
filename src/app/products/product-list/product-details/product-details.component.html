@@ -1,6 +1,6 @@
 
 
-<div class="card" style="width: 25rem;">
+<div *ngIf="productDetails" class="card" style="width: 25rem;">
   <img  [src]="productDetails.image" class="card-img-top" alt="{{productDetails.title}}">
   <div class="card-body">
     <h4 class="card-title">{{productDetails.title}}</h4>
