@@ -24,6 +24,12 @@ export class ProductListComponent implements OnInit {
     })
 
 
+
+  }
+
+
+  creatproduct(){
+
   }
 
 }

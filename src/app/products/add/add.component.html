@@ -1,7 +1,22 @@
 <div><h1>Add Product</h1></div>
-<!-- <form #productPost="ngForm" (ngSubmit)="onSubmit(productPost.value)">
-  <input type="text" name="title" ngModel placeholder="title" >
-  <input type="number" name="price" ngModel placeholder="price">
-  <input type="category" name="category" ngModel placeholder="category">
-  <button class="btn btn-primary" type="submit"></button>
-</form> -->
+
+<form [formGroup]="addProductForm" (submit)="createProduct()">
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">title</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="title">
+
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">price</label>
+    <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="price">
+
+  </div>
+
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">category</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="category">
+
+  </div>
+  <button class="btn btn-primary">add</button>
+</form>

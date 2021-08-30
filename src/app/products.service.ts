@@ -20,4 +20,8 @@ export class ProductsService {
     return this._HttpClient.get(`https://fakestoreapi.com/products/${id}`)
 
   }
+
+  addProduct(createBody:any){
+    return this._HttpClient.post('https://fakestoreapi.com/products',createBody)
+  }
 }
